@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savoria - Restoran & Kuliner Lezat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header_area">
+        <h1>Savoria Resto</h1>
+        <nav class="nav_menu">
+            <a href="#menu">Menu</a>
+            <a href="#pesanan">Pesanan</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+
+        <div class="info_keranjang">
+            🍽️ Total Item: <span id="jumlah_item">0</span>
+        </div>
+    </header>
+
+    <main class="wrapper_utama">
+      
+        <section id="menu" class="area_menu">
+            <h2>Menu Kuliner Pilihan</h2>
+            <div class="daftar_produk">
+                
+                <div class="kartu_menu">
+                    <img src="Wagyu.png" alt="Steak Daging Sapi">
+                    <h3>Wagyu Steak Premium</h3>
+                    <p class="harga_menu">Rp 145.000</p>
+                    <button class="tombol_beli" data-title="Wagyu Steak Premium" data-price="145000">Tambah Ke Keranjang</button>
+                </div>
+
+                <div class="kartu_menu">
+                    <img src="Burger.png" alt="Burger Keju Spesial">
+                    <h3>Crispy Cheese Burger</h3>
+                    <p class="harga_menu">Rp 65.000</p>
+                    <button class="tombol_beli" data-title="Crispy Cheese Burger" data-price="65000">Tambah Ke Keranjang</button>
+                </div>
+
+                <div class="kartu_menu">
+                    <img src="Pizza.png" alt="Pizza Italia Keju">
+                    <h3>Italian Pepperoni Pizza</h3>
+                    <p class="harga_menu">Rp 95.000</p>
+                    <button class="tombol_beli" data-title="Italian Pepperoni Pizza" data-price="95000">Tambah Ke Keranjang</button>
+                </div>
+
+                <div class="kartu_menu">
+                    <img src="Lemon.png" alt="Es Teh Manis Segar">
+                    <h3>Signature Lemon Tea</h3>
+                    <p class="harga_menu">Rp 25.000</p>
+                    <button class="tombol_beli" data-title="Signature Lemon Tea" data-price="25000">Tambah Ke Keranjang</button>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section id="pesanan" class="area_pembayaran">
+            <h2>Form Pesanan</h2>
+
+            <div class="ringkasan_keranjang">
+                <h3>Menu di Keranjang:</h3>
+                <ul id="daftar_menu_terpilih">
+                    <li class="teks_kosong">Belum ada menu yang dipilih.</li>
+                </ul>
+            </div>
+
+            <p class="teks_total">Total Bayar: <strong id="total_harga_teks">Rp 0</strong></p>
+
+            <form id="form_transaksi">
+                <div class="input_group">
+                    <label for="input_nama">Nama Lengkap:</label>
+                    <input type="text" id="input_nama" placeholder="Masukkan nama" required>
+                </div>
+
+                <div class="input_group">
+                    <label for="input_email">Email / Gmail:</label>
+                    <input type="email" id="input_email" placeholder="contoh@gmail.com" required>
+                </div>
+
+                <div class="input_group">
+                    <label for="pilih_metode">Metode Pembayaran:</label>
+                    <select id="pilih_metode" required>
+                        <option value="">-- Pilih Pembayaran --</option>
+                        <option value="QRIS">QRIS / e-Wallet</option>
+                        <option value="Transfer Bank">Transfer Bank</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="tombol_bayar">Bayar Sekarang</button>
+            </form>
+        </section>
+
+        <section id="kontak" class="area_kontak">
+            <h2>Hubungi Kami</h2>
+            <p>📍 Jl. Kuliner Lezat No. 88, Medan</p>
+            <p>📞 +62 812-3456-7890</p>
+            <p>✉️ support@savoriaresto.com</p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
